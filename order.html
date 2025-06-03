@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoShopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+      <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <form class="search-form">
+        <input type="text" placeholder="Search Product....">
+        <button type="submit"><span class="icon-search"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+      </form>
+      <div class="header-actions">
+        <a href="tel:01403111999" class="call-btn"><i class="fa-solid fa-phone"></i> 01403111999</a>
+        <a href="cart.html" class="cart-btn">
+          <span class="icon-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+
+ <navbar class="navbar">
+    <div class="left">
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="/shop_product.html">Categories ▾</a>
+        <div class="dropdown-content">
+          <a href="shop_product.html"><span>Accessories</span></a>
+          <a href="shop_product.html"><span>Watch</span></a>
+          <a href="shop_product.html"><span>Shirt</span></a>
+          <a href="shop_product.html"><span>Pant</span></a>
+          <a href="shop_product.html"><span>Panjabi</span></a>
+          <a href="shop_product.html"><span>Polo</span></a>
+          <a href="shop_product.html"><span>T-Shirt</span></a>
+          <a href="shop_product.html"><span>Blazer</span></a>
+          <a href="shop_product.html"><span>Waistcoat</span></a>
+          <a href="shop_product.html"><span>Shoe</span></a>
+          <a href="shop_product.html"><span>Belt</span></a>
+          <a href="shop_product.html"><span>Jacket</span></a>
+          <a href="shop_product.html"><span>High Neck</span></a>
+          <a href="shop_product.html"><span>Hoodie</span></a>
+        </div>
+      </div>
+      <a href="/shop_product.html">Shop Product</a>
+      <a href="/best_sell.html">Best Selling</a>
+      <a href="/flash_sales.html">Flash Sale</a>
+    </div>
+
+    <div class="right">
+      <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </navbar>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/index.html">Home</a>
+    <div class="dropdown" onclick="toggleDropdown(this)">
+      <a href="#">Categories ▾</a>
+      <div class="dropdown-content">
+        <a href="shop_product.html"><span>Accessories</span></a>
+        <a href="shop_product.html"><span>Watch</span></a>
+        <a href="shop_product.html"><span>Shirt</span></a>
+        <a href="shop_product.html"><span>Pant</span></a>
+        <a href="shop_product.html"><span>Panjabi</span></a>
+        <a href="shop_product.html"><span>Polo</span></a>
+        <a href="shop_product.html"><span>T-Shirt</span></a>
+        <a href="shop_product.html"><span>Blazer</span></a>
+        <a href="shop_product.html"><span>Waistcoat</span></a>
+        <a href="shop_product.html"><span>Shoe</span></a>
+        <a href="shop_product.html"><span>Belt</span></a>
+        <a href="shop_product.html"><span>Jacket</span></a>
+        <a href="shop_product.html"><span>High Neck</span></a>
+        <a href="shop_product.html"><span>Hoodie</span></a>
+      </div>
+    </div>
+    <a href="/shop_product.html">Shop Product</a>
+    <a href="/best_sell.html">Best Selling</a>
+    <a href="/flash_sales.html">Flash Sale</a>
+    <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+  </div>
+
+
+
+     
+  </header>
+
+    
+<div class="product_container">
+  <div class="product-section">
+    <div class="image-container">
+      <img src="/img/12.jpg" alt="Casual Shirt">
+    </div>
+    <div class="product-details">
+      <h2>Casual Shirt</h2>
+      <div class="price">৳650 <span class="old-price">৳850</span></div>
+
+      <div class="select-row">
+        <label>Color</label>
+        <select>
+          <option>Blue</option>
+          <option>Green</option>
+        </select>
+      </div>
+
+      <div class="select-row">
+        <label>Size</label>
+        <div class="sizes">
+          <button data-size="M">M</button>
+          <button data-size="L">L</button>
+          <button data-size="XL">XL</button>
+          <button data-size="XXL">XXL</button>
+        </div>
+      </div>
+
+      <div class="select-row">
+        <label>Quantity</label>
+        <div class="quantity">
+          <button id="decrease">-</button>
+          <input type="text" id="quantity" value="1" readonly>
+          <button id="increase">+</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="whatsapp">Order via WhatsApp</button>
+        <button class="upload">Upload</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="description">Description</button>
+    <button class="tab-btn" data-tab="review">Review</button>
+  </div>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="description">
+      <h3>Product Description</h3>
+      <p>This stylish shirt is crafted from soft and breathable micro cotton Chinese fabric. The popular blue and brown paisley pattern is both elegant and comfortable, making this shirt a versatile addition to any wardrobe. It can be dressed up or down and pairs well with jeans, chinos, or even formal pants.</p>
+    </div>
+   <div class="tab-pane" id="review">
+  <h3>Customer Reviews</h3>
+  <div id="review-list">
+    <p>⭐️⭐️⭐️⭐️☆ — "Great fabric and fit!"</p>
+    <p>⭐️⭐️⭐️⭐️⭐️ — "Loved the color and material quality."</p>
+    <p>⭐️⭐️⭐️☆☆ — "Good for casual wear. Slightly loose fit."</p>
+  </div>
+
+  <h4 style="margin-top: 20px;">Write a Review</h4>
+  <form id="review-form">
+    <textarea id="review-text" rows="4" style="width: 100%; padding: 8px; margin-top: 10px;" placeholder="Write your review here..."></textarea>
+    <button type="submit" style="margin-top: 10px; padding: 8px 16px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit Review</button>
+  </form>
+</div>
+  </div>
+
+  <div class="related-products">
+    <h3>Related Products</h3>
+    <div class="related-grid">
+      <div class="related-item">
+        <img src="/img/11.jpg" alt="Shirt 1">
+        <p>Shirt 1</p>
+      </div>
+      <div class="related-item">
+        <img src="/img/13.jpg" alt="Shirt 2">
+        <p>Shirt 2</p>
+      </div>
+      <div class="related-item">
+        <img src="/img/15.jpg" alt="Shirt 3">
+        <p>Shirt 3</p>
+      </div>
+      <div class="related-item">
+        <img src="/img/5.jpg" alt="Shirt 4">
+        <p>Shirt 4</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <div class="logo">
+          ><img src="img/logo.png" alt="">
+        </div>
+        <p>GoShopping, providing elegance &amp; lucrative outfit items sourced both locally &amp; globally.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>GoShopping.com.bd@gmail.com</p>
+        <p>0190865323</p>
+        <p>Level-15, Rupayan Trade Center<br />Banglamotor, 114 Kazi Nazrul Islam Avenue, Dhaka-1000</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services & Help</h4>
+        <ul>
+          <li>Refund and Returns Policy</li>
+          <li>Privacy Policy</li>
+          <li>About Us</li>
+          <li>Contact us</li>
+          <li>Become Our Local Partner (LLP)</li>
+        </ul>
+        <button class="outlet-btn">LIVE SHOPPING OUTLETS</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-payment-icons">
+        <!-- Use small images or placeholders for payment methods -->
+        <img src="" alt="Payment icons" />
+      </div>
+      <div class="footer-copy">©Delevoped By CRACK404</div>
+    </div>
+  </footer>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>

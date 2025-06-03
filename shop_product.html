@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoShopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+    <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <form class="search-form">
+        <input type="text" placeholder="Search Product....">
+        <button type="submit"><span class="icon-search"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+      </form>
+      <div class="header-actions">
+        <a href="tel:01403111999" class="call-btn"><i class="fa-solid fa-phone"></i> 01403111999</a>
+        <a href="cart.html" class="cart-btn">
+          <span class="icon-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+
+ <navbar class="navbar">
+    <div class="left">
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="/shop_product.html">Categories ▾</a>
+        <div class="dropdown-content">
+          <a href="shop_product.html"><span>Accessories</span></a>
+          <a href="shop_product.html"><span>Watch</span></a>
+          <a href="shop_product.html"><span>Shirt</span></a>
+          <a href="shop_product.html"><span>Pant</span></a>
+          <a href="shop_product.html"><span>Panjabi</span></a>
+          <a href="shop_product.html"><span>Polo</span></a>
+          <a href="shop_product.html"><span>T-Shirt</span></a>
+          <a href="shop_product.html"><span>Blazer</span></a>
+          <a href="shop_product.html"><span>Waistcoat</span></a>
+          <a href="shop_product.html"><span>Shoe</span></a>
+          <a href="shop_product.html"><span>Belt</span></a>
+          <a href="shop_product.html"><span>Jacket</span></a>
+          <a href="shop_product.html"><span>High Neck</span></a>
+          <a href="shop_product.html"><span>Hoodie</span></a>
+        </div>
+      </div>
+      <a href="/shop_product.html">Shop Product</a>
+      <a href="/best_sell.html">Best Selling</a>
+      <a href="/flash_sales.html">Flash Sale</a>
+    </div>
+
+    <div class="right">
+      <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </navbar>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/index.html">Home</a>
+    <div class="dropdown" onclick="toggleDropdown(this)">
+      <a href="#">Categories ▾</a>
+      <div class="dropdown-content">
+        <a href="shop_product.html"><span>Accessories</span></a>
+        <a href="shop_product.html"><span>Watch</span></a>
+        <a href="shop_product.html"><span>Shirt</span></a>
+        <a href="shop_product.html"><span>Pant</span></a>
+        <a href="shop_product.html"><span>Panjabi</span></a>
+        <a href="shop_product.html"><span>Polo</span></a>
+        <a href="shop_product.html"><span>T-Shirt</span></a>
+        <a href="shop_product.html"><span>Blazer</span></a>
+        <a href="shop_product.html"><span>Waistcoat</span></a>
+        <a href="shop_product.html"><span>Shoe</span></a>
+        <a href="shop_product.html"><span>Belt</span></a>
+        <a href="shop_product.html"><span>Jacket</span></a>
+        <a href="shop_product.html"><span>High Neck</span></a>
+        <a href="shop_product.html"><span>Hoodie</span></a>
+      </div>
+    </div>
+    <a href="/shop_product.html">Shop Product</a>
+    <a href="/best_sell.html">Best Selling</a>
+    <a href="/flash_sales.html">Flash Sale</a>
+    <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+  </div>
+
+
+
+     
+  </header>
+
+    
+  
+   <div class="container-main">
+        <aside class="sidebar">
+            <h2 class="heading-lg">Categories</h2>
+            <ul class="cat-list">
+                <li class="cat-item" data-category="Accessories">
+                    <span>Accessories</span>
+                    <span class="text-sm-gray">(3)</span>
+                </li>
+                <li class="cat-item" data-category="Watch">
+                    <span>Watch</span>
+                    <span class="text-sm-gray">(2)</span>
+                </li>
+                <li class="cat-item" data-category="Shirt">
+                    <span>Shirt</span>
+                    <span class="text-sm-gray">(134)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Casual Shirt">
+                    <span>Casual Shirt</span>
+                    <span class="text-sm-gray">(71)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Check Shirt">
+                    <span>Check Shirt</span>
+                    <span class="text-sm-gray">(12)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Formal Shirt">
+                    <span>Formal Shirt</span>
+                    <span class="text-sm-gray">(34)</span>
+                </li>
+                <li class="cat-item" data-category="Pant">
+                    <span>Pant</span>
+                    <span class="text-sm-gray">(62)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Denim Pant">
+                    <span>Denim Pant</span>
+                    <span class="text-sm-gray">(21)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Formal Pant">
+                    <span>Formal Pant</span>
+                    <span class="text-sm-gray">(21)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Trouser">
+                    <span>Trouser</span>
+                    <span class="text-sm-gray">(10)</span>
+                </li>
+                <li class="cat-item" data-category="Panjabi">
+                    <span>Panjabi</span>
+                    <span class="text-sm-gray">(137)</span>
+                </li>
+                <li class="cat-item" data-category="Polo">
+                    <span>Polo</span>
+                    <span class="text-sm-gray">(110)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Polo Shirt">
+                    <span>Polo Shirt</span>
+                    <span class="text-sm-gray">(104)</span>
+                </li>
+                <li class="cat-item" data-category="T-Shirt">
+                    <span>T-Shirt</span>
+                    <span class="text-sm-gray">(14)</span>
+                </li>
+                <li class="cat-item" data-category="Blazer">
+                    <span>Blazer</span>
+                    <span class="text-sm-gray">(26)</span>
+                </li>
+                <li class="cat-item" data-category="Waistcoat">
+                    <span>Waistcoat</span>
+                    <span class="text-sm-gray">(6)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Premium Waistcoat">
+                    <span>Premium Waistcoat</span>
+                </li>
+                <li class="cat-item" data-category="Shoe">
+                    <span>Shoe</span>
+                    <span class="text-sm-gray">(39)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Oxford Shoe">
+                    <span>Oxford Shoe</span>
+                    <span class="text-sm-gray">(3)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Loafer">
+                    <span>Loafer</span>
+                    <span class="text-sm-gray">(23)</span>
+                </li>
+                <li class="cat-item cat-item-indent" data-category="Derby Shoe">
+                    <span>Derby Shoe</span>
+                    <span class="text-sm-gray">(1)</span>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="heading-xl">ALL PRODUCTS</h1>
+
+            <div class="search-bar">
+                <input type="text" id="product-search" placeholder="Search products..." class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div id="product-grid" class="prod-grid">
+                <div class="prod-card" data-category="Shoe" data-name="Branded Sneakers">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Branded Sneakers" class="prod-img">
+                        <span class="tag-live">LIVE</span>
+                    </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Branded Sneakers</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 1,390</span>
+                            <span class="text-sm-gray text-line-through">৳ 4,636</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="prod-card" data-category="Shirt" data-name="Men's Exclusive Embroidered Panjabi">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Men's Exclusive Embroidered Panjabi" class="prod-img">
+                        <span class="tag-live">LIVE</span>
+                    </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Men's Exclusive Embroidered Panjabi</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 1,495</span>
+                            <span class="text-sm-gray text-line-through">৳ 2,900</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="prod-card" data-category="Panjabi" data-name="Premium Embroidery Panjabi">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Premium Embroidery Panjabi" class="prod-img">
+                        </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Premium Embroidery Panjabi</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 2,900</span>
+                            <span class="text-sm-gray text-line-through">৳ 5,000</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="prod-card" data-category="Panjabi" data-name="Men's Exclusive Embroidered Panjabi">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Men's Exclusive Embroidered Panjabi" class="prod-img">
+                        </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Men's Exclusive Embroidered Panjabi</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 2,200</span>
+                            <span class="text-sm-gray text-line-through">৳ 3,200</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="prod-card" data-category="Panjabi" data-name="Digital Print & Embroidery Panjabi">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Digital Print & Embroidery Panjabi" class="prod-img">
+                        <span class="tag-live">LIVE</span>
+                    </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Digital Print & Embroidery Panjabi</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 1,390</span>
+                            <span class="text-sm-gray text-line-through">৳ 4,636</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="prod-card" data-category="Panjabi" data-name="Digital Print & Sequence Panjabi">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Digital Print & Sequence Panjabi" class="prod-img">
+                        <span class="tag-live">LIVE</span>
+                    </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Digital Print & Sequence Panjabi</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 1,495</span>
+                            <span class="text-sm-gray text-line-through">৳ 2,900</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="prod-card" data-category="Panjabi" data-name="Men's Exclusive Embroidered Panjabi">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Men's Exclusive Embroidered Panjabi" class="prod-img">
+                        <span class="tag-live">LIVE</span>
+                    </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Men's Exclusive Embroidered Panjabi</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 2,900</span>
+                            <span class="text-sm-gray text-line-through">৳ 5,000</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="prod-card" data-category="Panjabi" data-name="Men's Exclusive Embroidered Panjabi">
+                    <div class="img-wrap">
+                        <img src="img/4.jpg" alt="Men's Exclusive Embroidered Panjabi" class="prod-img">
+                        <span class="tag-live">LIVE</span>
+                    </div>
+                    <div class="prod-card-content">
+                        <h3 class="prod-title">Men's Exclusive Embroidered Panjabi</h3>
+                        <div class="price-info">
+                            <span class="text-red-bold">৳ 2,200</span>
+                            <span class="text-sm-gray text-line-through">৳ 3,200</span>
+                        </div>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+ 
+ 
+ <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <div class="logo">
+          ><img src="img/logo.png" alt="">
+        </div>
+        <p>GoShopping, providing elegance &amp; lucrative outfit items sourced both locally &amp; globally.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>GoShopping.com.bd@gmail.com</p>
+        <p>0190865323</p>
+        <p>Level-15, Rupayan Trade Center<br />Banglamotor, 114 Kazi Nazrul Islam Avenue, Dhaka-1000</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services & Help</h4>
+        <ul>
+          <li>Refund and Returns Policy</li>
+          <li>Privacy Policy</li>
+          <li>About Us</li>
+          <li>Contact us</li>
+          <li>Become Our Local Partner (LLP)</li>
+        </ul>
+        <button class="outlet-btn">LIVE SHOPPING OUTLETS</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-payment-icons">
+        <!-- Use small images or placeholders for payment methods -->
+        <img src="" alt="Payment icons" />
+      </div>
+      <div class="footer-copy">©Delevoped By CRACK404</div>
+    </div>
+  </footer>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>

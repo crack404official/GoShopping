@@ -1,0 +1,239 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoShopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+      <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <form class="search-form">
+        <input type="text" placeholder="Search Product....">
+        <button type="submit"><span class="icon-search"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+      </form>
+      <div class="header-actions">
+        <a href="tel:01403111999" class="call-btn"><i class="fa-solid fa-phone"></i> 01403111999</a>
+        <a href="cart.html" class="cart-btn">
+          <span class="icon-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+
+ <navbar class="navbar">
+    <div class="left">
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="/shop_product.html">Categories ▾</a>
+        <div class="dropdown-content">
+          <a href="shop_product.html"><span>Accessories</span></a>
+          <a href="shop_product.html"><span>Watch</span></a>
+          <a href="shop_product.html"><span>Shirt</span></a>
+          <a href="shop_product.html"><span>Pant</span></a>
+          <a href="shop_product.html"><span>Panjabi</span></a>
+          <a href="shop_product.html"><span>Polo</span></a>
+          <a href="shop_product.html"><span>T-Shirt</span></a>
+          <a href="shop_product.html"><span>Blazer</span></a>
+          <a href="shop_product.html"><span>Waistcoat</span></a>
+          <a href="shop_product.html"><span>Shoe</span></a>
+          <a href="shop_product.html"><span>Belt</span></a>
+          <a href="shop_product.html"><span>Jacket</span></a>
+          <a href="shop_product.html"><span>High Neck</span></a>
+          <a href="shop_product.html"><span>Hoodie</span></a>
+        </div>
+      </div>
+      <a href="/shop_product.html">Shop Product</a>
+      <a href="/best_sell.html">Best Selling</a>
+      <a href="/flash_sales.html">Flash Sale</a>
+    </div>
+
+    <div class="right">
+      <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </navbar>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/index.html">Home</a>
+    <div class="dropdown" onclick="toggleDropdown(this)">
+      <a href="#">Categories ▾</a>
+      <div class="dropdown-content">
+        <a href="shop_product.html"><span>Accessories</span></a>
+        <a href="shop_product.html"><span>Watch</span></a>
+        <a href="shop_product.html"><span>Shirt</span></a>
+        <a href="shop_product.html"><span>Pant</span></a>
+        <a href="shop_product.html"><span>Panjabi</span></a>
+        <a href="shop_product.html"><span>Polo</span></a>
+        <a href="shop_product.html"><span>T-Shirt</span></a>
+        <a href="shop_product.html"><span>Blazer</span></a>
+        <a href="shop_product.html"><span>Waistcoat</span></a>
+        <a href="shop_product.html"><span>Shoe</span></a>
+        <a href="shop_product.html"><span>Belt</span></a>
+        <a href="shop_product.html"><span>Jacket</span></a>
+        <a href="shop_product.html"><span>High Neck</span></a>
+        <a href="shop_product.html"><span>Hoodie</span></a>
+      </div>
+    </div>
+    <a href="/shop_product.html">Shop Product</a>
+    <a href="/best_sell.html">Best Selling</a>
+    <a href="/flash_sales.html">Flash Sale</a>
+    <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+  </div>
+
+
+
+     
+  </header>
+
+
+
+
+  <div class="profile-container">
+    <div class="profile-left">
+      <div class="avatar-wrapper" title="প্রোফাইল ছবি পরিবর্তন করুন">
+        <img
+          src="/img/15.jpg"
+          alt="User Avatar"
+        />
+        <div class="avatar-edit"><i class="fa fa-pencil"></i></div>
+      </div>
+      <h2 class="user-name">Rashed Ali</h2>
+      <p class="user-email">Rashedali@example.com</p>
+
+      <div class="order-stats">
+        <div class="stat-card">
+          <div class="stat-number">12</div>
+          <div class="stat-label">মোট অর্ডার</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div class="stat-label">প্রক্রিয়াধীন অর্ডার</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">ডেলিভারী সফল</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <form class="user-info" action="#" method="post">
+        <label for="name">নাম</label>
+        <input id="name" name="name" type="text" value="Rashed ali" />
+
+        <label for="email">ইমেইল</label>
+        <input id="email" name="email" type="email" value="Rashedali@example.com" />
+
+        <label for="phone">মোবাইল নাম্বার</label>
+        <input id="phone" name="phone" type="tel" value="+8801712345678" />
+
+        <label for="address">ঠিকানা</label>
+        <textarea id="address" name="address" rows="2"
+          >ঢাকা, বাংলাদেশ</textarea
+        >
+
+        <button type="submit" class="save-btn">আপডেট করুন</button>
+      </form>
+
+      <section class="recent-orders">
+        <h3>সাম্প্রতিক অর্ডারসমূহ</h3>
+        <ul class="order-list">
+          <li class="order-item">
+            <img
+              src="/img/3.jpg"
+              alt=""
+            />
+            <div class="order-details">
+              <div class="order-name">pent</div>
+              <div class="order-date">অর্ডার করা হয়েছে: ০৫ জুন ২০২৫</div>
+            </div>
+            <div class="order-price">৳ ২০০</div>
+          </li>
+          <li class="order-item">
+            <img
+              src="/img/2.jpg"
+              alt=""
+            />
+            <div class="order-details">
+              <div class="order-name">shirt</div>
+              <div class="order-date">অর্ডার করা হয়েছে: ২০ মে ২০২৫</div>
+            </div>
+            <div class="order-price">৳ 350</div>
+          </li>
+          <li class="order-item">
+            <img
+              src="/img/1.jpg"
+              alt=""
+            />
+            <div class="order-details">
+              <div class="order-name">punjabi</div>
+              <div class="order-date">অর্ডার করা হয়েছে: ১২ মে ২০২৫</div>
+            </div>
+            <div class="order-price">৳ 80</div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+
+ <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <div class="logo">
+          ><img src="img/logo.png" alt="">
+        </div>
+        <p>GoShopping, providing elegance &amp; lucrative outfit items sourced both locally &amp; globally.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>GoShopping.com.bd@gmail.com</p>
+        <p>0190865323</p>
+        <p>Level-15, Rupayan Trade Center<br />Banglamotor, 114 Kazi Nazrul Islam Avenue, Dhaka-1000</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services & Help</h4>
+        <ul>
+          <li>Refund and Returns Policy</li>
+          <li>Privacy Policy</li>
+          <li>About Us</li>
+          <li>Contact us</li>
+          <li>Become Our Local Partner (LLP)</li>
+        </ul>
+        <button class="outlet-btn">LIVE SHOPPING OUTLETS</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-payment-icons">
+        <!-- Use small images or placeholders for payment methods -->
+        <img src="" alt="Payment icons" />
+      </div>
+      <div class="footer-copy">©Delevoped By CRACK404</div>
+    </div>
+  </footer>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>

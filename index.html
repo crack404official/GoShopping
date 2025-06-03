@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoShopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+     <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <form class="search-form">
+        <input type="text" placeholder="Search Product....">
+        <button type="submit"><span class="icon-search"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+      </form>
+      <div class="header-actions">
+        <a href="tel:01403111999" class="call-btn"><i class="fa-solid fa-phone"></i> 01403111999</a>
+        <a href="cart.html" class="cart-btn">
+          <span class="icon-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+
+    <navbar class="navbar">
+    <div class="left">
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Categories ▾</a>
+        <div class="dropdown-content">
+          <a href="shop_product.html"><span>Accessories</span></a>
+          <a href="shop_product.html"><span>Watch</span></a>
+          <a href="shop_product.html"><span>Shirt</span></a>
+          <a href="shop_product.html"><span>Pant</span></a>
+          <a href="shop_product.html"><span>Panjabi</span></a>
+          <a href="shop_product.html"><span>Polo</span></a>
+          <a href="shop_product.html"><span>T-Shirt</span></a>
+          <a href="shop_product.html"><span>Blazer</span></a>
+          <a href="shop_product.html"><span>Waistcoat</span></a>
+          <a href="shop_product.html"><span>Shoe</span></a>
+          <a href="shop_product.html"><span>Belt</span></a>
+          <a href="shop_product.html"><span>Jacket</span></a>
+          <a href="shop_product.html"><span>High Neck</span></a>
+          <a href="shop_product.html"><span>Hoodie</span></a>
+        </div>
+      </div>
+      <a href="/shop_product.html">Shop Product</a>
+      <a href="/best_sell.html">Best Selling</a>
+      <a href="/flash_sales.html">Flash Sale</a>
+    </div>
+
+    <div class="right">
+     <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+
+     
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </navbar>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/index.html">Home</a>
+    <div class="dropdown" onclick="toggleDropdown(this)">
+      <a href="#">Categories ▾</a>
+      <div class="dropdown-content">
+        <a href="shop_product.html"><span>Accessories</span></a>
+        <a href="shop_product.html"><span>Watch</span></a>
+        <a href="shop_product.html"><span>Shirt</span></a>
+        <a href="shop_product.html"><span>Pant</span></a>
+        <a href="shop_product.html"><span>Panjabi</span></a>
+        <a href="shop_product.html"><span>Polo</span></a>
+        <a href="shop_product.html"><span>T-Shirt</span></a>
+        <a href="shop_product.html"><span>Blazer</span></a>
+        <a href="shop_product.html"><span>Waistcoat</span></a>
+        <a href="shop_product.html"><span>Shoe</span></a>
+        <a href="shop_product.html"><span>Belt</span></a>
+        <a href="shop_product.html"><span>Jacket</span></a>
+        <a href="shop_product.html"><span>High Neck</span></a>
+        <a href="shop_product.html"><span>Hoodie</span></a>
+      </div>
+    </div>
+    <a href="/shop_product.html">Shop Product</a>
+    <a href="/best_sell.html">Best Selling</a>
+    <a href="/flash_sales.html">Flash Sale</a>
+  <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+  </div>
+
+  
+     
+  </header>
+    
+  <section class="hero-banner">
+      <img src="img/4.jpg" alt="Live Shopping Banner" />
+    </section>
+
+  
+    <section class="flash-sale" id="flash-sale-70">
+      <div class="section-bar">
+        <div class="flash-sale-timer">End in <span class="timer-box">2</span> <span class="timer-box">05</span> <span
+            class="timer-box">44</span> <span class="timer-box">53</span></div>
+        <h2>FLASH SALE 70%</h2>
+        <a href="#" class="shop-more-btn">SHOP MORE</a>
+      </div>
+      <div class="products-row">
+        <div class="product-card">
+          <img src="img/11.jpg" alt="Men's Product" />
+          <div class="product-info">
+            <span class="product-discount">70% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳297</span>
+              <span class="product-old-price">৳990</span>
+            </div>
+          </div>
+          <button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="Men's Product" />
+          <div class="product-info">
+            <span class="product-discount">70% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳297</span>
+              <span class="product-old-price">৳990</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/5.jpg" alt="Men's Product" />
+          <div class="product-info">
+            <span class="product-discount">70% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳297</span>
+              <span class="product-old-price">৳990</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/6.jpg" alt="Men's Product" />
+          <div class="product-info">
+            <span class="product-discount">70% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳297</span>
+              <span class="product-old-price">৳990</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/8.jpg" alt="Men's Product" />
+          <div class="product-info">
+            <span class="product-discount">70% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳297</span>
+              <span class="product-old-price">৳990</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src=" img/14.jpg" alt="Men's Product" />
+          <div class="product-info">
+            <span class="product-discount">70% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳297</span>
+              <span class="product-old-price">৳990</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/7.jpg" alt="Men's Product" />
+          <div class="product-info">
+            <span class="product-discount">70% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳297</span>
+              <span class="product-old-price">৳990</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <!-- More product-card divs can be duplicated here -->
+      </div>
+    </section>
+
+    <section class="flash-sale" id="flash-sale-60">
+      <div class="section-bar">
+        <div class="flash-sale-timer">End in <span class="timer-box">1</span> <span class="timer-box">07</span> <span
+            class="timer-box">19</span> <span class="timer-box">53</span></div>
+        <h2>FLASH SALE 60%</h2>
+        <a href="#" class="shop-more-btn">SHOP MORE</a>
+      </div>
+      <div class="products-row">
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Fashionable Mens Wear" />
+          <div class="product-info">
+            <span class="product-discount">60% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳476</span>
+              <span class="product-old-price">৳1,190</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="Fashionable Mens Wear" />
+          <div class="product-info">
+            <span class="product-discount">60% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳476</span>
+              <span class="product-old-price">৳1,190</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/9.jpg" alt="Fashionable Mens Wear" />
+          <div class="product-info">
+            <span class="product-discount">60% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳476</span>
+              <span class="product-old-price">৳1,190</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/12.jpg" alt="Fashionable Mens Wear" />
+          <div class="product-info">
+            <span class="product-discount">60% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳476</span>
+              <span class="product-old-price">৳1,190</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/13.jpg" alt="Fashionable Mens Wear" />
+          <div class="product-info">
+            <span class="product-discount">60% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳476</span>
+              <span class="product-old-price">৳1,190</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/8.jpg" alt="Fashionable Mens Wear" />
+          <div class="product-info">
+            <span class="product-discount">60% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳476</span>
+              <span class="product-old-price">৳1,190</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="Fashionable Mens Wear" />
+          <div class="product-info">
+            <span class="product-discount">60% off</span>
+            <div class="product-prices">
+              <span class="product-price">৳476</span>
+              <span class="product-old-price">৳1,190</span>
+            </div>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-arrivals">
+      <div class="section-bar">
+        <h2>NEW ARRIVALS</h2>
+        <a href="#" class="shop-more-btn">SHOP MORE</a>
+      </div>
+      <div class="products-row">
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/10.jpg" alt="New Arrival" />
+          <div class="product-prices">
+            <span class="product-price">৳1,402</span>
+            <span class="product-old-price">৳6,099</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <!-- More product-card divs can be duplicated here -->
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>CATEGORIES</h2>
+      <div class="categories-grid">
+        <div class="category-card">ACCESSORIES</div>
+        <div class="category-card">WATCH</div>
+        <div class="category-card">SHIRT</div>
+        <div class="category-card">PANT</div>
+        <div class="category-card">PANJABI</div>
+        <div class="category-card">POLO</div>
+        <div class="category-card">T-SHIRT</div>
+        <div class="category-card">BLAZER</div>
+        <div class="category-card">WAISTCOAT</div>
+        <div class="category-card">SHOE</div>
+        <div class="category-card">BELT</div>
+        <div class="category-card">JACKET</div>
+        <div class="category-card">HIGH NECK</div>
+        <div class="category-card">HOODIE</div>
+      </div>
+    </section>
+
+    <section class="winter-products">
+      <div class="section-bar">
+        <h2>WINTER</h2>
+        <a href="#" class="shop-more-btn">SHOP MORE</a>
+      </div>
+      <div class="products-row">
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/14.jpg" alt="Winter Product" />
+          <div class="product-prices">
+            <span class="product-price">৳1,250</span>
+            <span class="product-old-price">৳1,650</span>
+          </div>
+<button class="buy-btn" onclick="window.location.href='/order.html'">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
+ <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <div class="logo">
+          ><img src="img/logo.png" alt="">
+        </div>
+        <p>GoShopping, providing elegance &amp; lucrative outfit items sourced both locally &amp; globally.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>GoShopping.com.bd@gmail.com</p>
+        <p>0190865323</p>
+        <p>Level-15, Rupayan Trade Center<br />Banglamotor, 114 Kazi Nazrul Islam Avenue, Dhaka-1000</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services & Help</h4>
+        <ul>
+          <li>Refund and Returns Policy</li>
+          <li>Privacy Policy</li>
+          <li>About Us</li>
+          <li>Contact us</li>
+          <li>Become Our Local Partner (LLP)</li>
+        </ul>
+        <button class="outlet-btn">LIVE SHOPPING OUTLETS</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-payment-icons">
+        <!-- Use small images or placeholders for payment methods -->
+        <img src="" alt="Payment icons" />
+      </div>
+      <div class="footer-copy">©Delevoped By CRACK404</div>
+    </div>
+  </footer>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>

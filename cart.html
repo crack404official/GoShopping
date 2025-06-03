@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অর্ডার ফরম</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <form class="search-form">
+        <input type="text" placeholder="Search Product....">
+        <button type="submit"><span class="icon-search"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+      </form>
+      <div class="header-actions">
+        <a href="tel:01403111999" class="call-btn"><i class="fa-solid fa-phone"></i> 01403111999</a>
+        <a href="cart.html" class="cart-btn">
+          <span class="icon-cart"><i class="fa-solid fa-cart-shopping"></i></span>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+
+ <navbar class="navbar">
+    <div class="left">
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <a href="/shop_product.html">Categories ▾</a>
+        <div class="dropdown-content">
+          <a href="shop_product.html"><span>Accessories</span></a>
+          <a href="shop_product.html"><span>Watch</span></a>
+          <a href="shop_product.html"><span>Shirt</span></a>
+          <a href="shop_product.html"><span>Pant</span></a>
+          <a href="shop_product.html"><span>Panjabi</span></a>
+          <a href="shop_product.html"><span>Polo</span></a>
+          <a href="shop_product.html"><span>T-Shirt</span></a>
+          <a href="shop_product.html"><span>Blazer</span></a>
+          <a href="shop_product.html"><span>Waistcoat</span></a>
+          <a href="shop_product.html"><span>Shoe</span></a>
+          <a href="shop_product.html"><span>Belt</span></a>
+          <a href="shop_product.html"><span>Jacket</span></a>
+          <a href="shop_product.html"><span>High Neck</span></a>
+          <a href="shop_product.html"><span>Hoodie</span></a>
+        </div>
+      </div>
+      <a href="/shop_product.html">Shop Product</a>
+      <a href="/best_sell.html">Best Selling</a>
+      <a href="/flash_sales.html">Flash Sale</a>
+    </div>
+
+    <div class="right">
+      <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </navbar>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/index.html">Home</a>
+    <div class="dropdown" onclick="toggleDropdown(this)">
+      <a href="#">Categories ▾</a>
+      <div class="dropdown-content">
+        <a href="shop_product.html"><span>Accessories</span></a>
+        <a href="shop_product.html"><span>Watch</span></a>
+        <a href="shop_product.html"><span>Shirt</span></a>
+        <a href="shop_product.html"><span>Pant</span></a>
+        <a href="shop_product.html"><span>Panjabi</span></a>
+        <a href="shop_product.html"><span>Polo</span></a>
+        <a href="shop_product.html"><span>T-Shirt</span></a>
+        <a href="shop_product.html"><span>Blazer</span></a>
+        <a href="shop_product.html"><span>Waistcoat</span></a>
+        <a href="shop_product.html"><span>Shoe</span></a>
+        <a href="shop_product.html"><span>Belt</span></a>
+        <a href="shop_product.html"><span>Jacket</span></a>
+        <a href="shop_product.html"><span>High Neck</span></a>
+        <a href="shop_product.html"><span>Hoodie</span></a>
+      </div>
+    </div>
+    <a href="/shop_product.html">Shop Product</a>
+    <a href="/best_sell.html">Best Selling</a>
+    <a href="/flash_sales.html">Flash Sale</a>
+    <button class="btn sign-in" onclick="window.location.href='/signup.html'">Sign up</button>
+  </div>
+
+
+
+     
+  </header>
+
+
+
+  <div class="order-form">
+    <h2>অর্ডারটি কমফর্ম করতে আপনার নাম, চিঠিরা, মোবাইল নাম্বার, লিখে অর্ডার কমফর্ম করুন</h2>
+    <div class="form-row">
+      <input type="text" placeholder="আপনার নাম লিখুন" />
+      <input type="text" placeholder="আপনার মোবাইল লিখুন" />
+    </div>
+    <div class="form-row">
+      <input type="text" placeholder="আপনার ঠিকানা লিখুন" />
+    </div>
+    <div class="form-row">
+      <select><option>ঢাকার বাহির</option></select>
+      <select><option>Select One</option></select>
+      <select><option>null</option></select>
+    </div>
+
+    <div class="payment-type">
+      <label><input type="radio" name="payment" checked /> Cash On Delivery</label>
+      <label><input type="radio" name="payment" /> Pay with Card/Mobile Wallet</label>
+    </div>
+
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product</th>
+          <th>Size</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="remove-btn" title="Remove product">&times;</button>
+            <img src="https://via.placeholder.com/60" alt="Product Image" class="product-img" />
+          </td>
+          <td>Branded Sneakers Black And White</td>
+          <td>
+            <select>
+              <option>44</option>
+            </select>
+          </td>
+          <td class="quantity-controls">
+            <button class="minus-btn">-</button>
+            <input type="text" value="1" />
+            <button class="plus-btn">+</button>
+          </td>
+          <td>TK 1,390</td>
+          <td>TK 1,390</td>
+        </tr>
+        <tr>
+          <td>
+            <button class="remove-btn" title="Remove product">&times;</button>
+            <img src="https://via.placeholder.com/60?text=Another" alt="Product Image" class="product-img" />
+          </td>
+          <td>Sport Shoes Red</td>
+          <td>
+            <select>
+              <option>42</option>
+              <option>43</option>
+            </select>
+          </td>
+          <td class="quantity-controls">
+            <button class="minus-btn">-</button>
+            <input type="text" value="2" />
+            <button class="plus-btn">+</button>
+          </td>
+          <td>TK 2,000</td>
+          <td>TK 4,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <span class="subtotal">Subtotal: TK 0</span>
+      <span class="delivery">Delivery charge: TK 70</span>
+      <span class="total">Total: TK 0</span>
+    </div>
+
+    <button class="submit-btn">অর্ডার কমফর্ম করুন</button>
+
+    <div class="empty-message" style="display:none;">আপনার কার্টে কোনো প্রোডাক্ট নেই।</div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <div class="logo">
+          ><img src="img/logo.png" alt="">
+        </div>
+        <p>GoShopping, providing elegance &amp; lucrative outfit items sourced both locally &amp; globally.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>GoShopping.com.bd@gmail.com</p>
+        <p>0190865323</p>
+        <p>Level-15, Rupayan Trade Center<br />Banglamotor, 114 Kazi Nazrul Islam Avenue, Dhaka-1000</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services & Help</h4>
+        <ul>
+          <li>Refund and Returns Policy</li>
+          <li>Privacy Policy</li>
+          <li>About Us</li>
+          <li>Contact us</li>
+          <li>Become Our Local Partner (LLP)</li>
+        </ul>
+        <button class="outlet-btn">LIVE SHOPPING OUTLETS</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-payment-icons">
+        <!-- Use small images or placeholders for payment methods -->
+        <img src="" alt="Payment icons" />
+      </div>
+      <div class="footer-copy">©Delevoped By CRACK404</div>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
