@@ -1,120 +1,77 @@
- function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('show');
-    }
+// === Global Functions ===
+function toggleMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenu) {
+    mobileMenu.classList.toggle('show');
+  }
+}
 
-    function toggleDropdown(el) {
-      el.classList.toggle('open');
-    }
+function toggleDropdown(el) {
+  el.classList.toggle('open');
+}
 
+// === Main Script ===
+document.addEventListener('DOMContentLoaded', () => {
+  // === Category Filter ===
+  const categoryItems = document.querySelectorAll(".cat-item");
+  const productCards = document.querySelectorAll(".prod-card");
 
-     document.addEventListener('DOMContentLoaded', () => {
-      const productTableBody = document.querySelector('.product-table tbody');
-      const subtotalEl = document.querySelector('.summary .subtotal');
-      const deliveryEl = document.querySelector('.summary .delivery');
-      const totalEl = document.querySelector('.summary .total');
-      const submitBtn = document.querySelector('.submit-btn');
-      const emptyMsg = document.querySelector('.empty-message');
+  if (categoryItems.length && productCards.length) {
+    categoryItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const selectedCategory = item.dataset.category;
 
-      const deliveryCharge = 70;
+        categoryItems.forEach((el) => el.classList.remove("active"));
+        item.classList.add("active");
 
-      function formatCurrency(num) {
-        return num.toLocaleString();
-      }
-
-      function updateTotals() {
-        let subtotal = 0;
-        const rows = productTableBody.querySelectorAll('tr');
-
-        if (rows.length === 0) {
-          // No products in cart
-          subtotalEl.textContent = 'Subtotal: TK 0';
-          totalEl.textContent = 'Total: TK 0';
-          deliveryEl.style.display = 'none';
-          submitBtn.style.display = 'none';
-          emptyMsg.style.display = 'block';
-          return;
-        }
-
-        deliveryEl.style.display = 'block';
-        submitBtn.style.display = 'block';
-        emptyMsg.style.display = 'none';
-
-        rows.forEach(row => {
-          const qtyInput = row.querySelector('input[type="text"]');
-          let qty = parseInt(qtyInput.value);
-          if (isNaN(qty) || qty < 1) qty = 1;
-
-          const priceText = row.querySelector('td:nth-child(5)').textContent.trim();
-          const price = parseInt(priceText.replace(/[^\d]/g, '')) || 0;
-          const totalPrice = qty * price;
-
-          row.querySelector('td:nth-child(6)').textContent = 'TK ' + formatCurrency(totalPrice);
-          subtotal += totalPrice;
-          qtyInput.value = qty; // sanitize input
+        productCards.forEach((card) => {
+          card.style.display =
+            card.dataset.category === selectedCategory ? "block" : "none";
         });
-
-        subtotalEl.textContent = 'Subtotal: TK ' + formatCurrency(subtotal);
-        deliveryEl.textContent = 'Delivery charge: TK ' + formatCurrency(deliveryCharge);
-        totalEl.textContent = 'Total: TK ' + formatCurrency(subtotal + deliveryCharge);
-      }
-
-      function attachRowListeners(row) {
-        const minusBtn = row.querySelector('.minus-btn');
-        const plusBtn = row.querySelector('.plus-btn');
-        const qtyInput = row.querySelector('input[type="text"]');
-        const removeBtn = row.querySelector('.remove-btn');
-
-        minusBtn.addEventListener('click', () => {
-          let qty = parseInt(qtyInput.value) || 1;
-          if (qty > 1) {
-            qty--;
-            qtyInput.value = qty;
-            updateTotals();
-          }
-        });
-
-        plusBtn.addEventListener('click', () => {
-          let qty = parseInt(qtyInput.value) || 1;
-          qty++;
-          qtyInput.value = qty;
-          updateTotals();
-        });
-
-        qtyInput.addEventListener('input', () => {
-          let qty = parseInt(qtyInput.value);
-          if (isNaN(qty) || qty < 1) {
-            qtyInput.value = 1;
-          }
-          updateTotals();
-        });
-
-        removeBtn.addEventListener('click', () => {
-          row.remove();
-          updateTotals();
-        });
-      }
-
-      // Attach event listeners to existing rows
-      productTableBody.querySelectorAll('tr').forEach(attachRowListeners);
-
-      updateTotals();
+      });
     });
+  }
 
-    
+  // === Search Functionality ===
+  const searchInput = document.getElementById("product-search");
+  const searchBtn = document.querySelector(".search-btn");
 
-   document.getElementById('increase').onclick = () => {
-    let input = document.getElementById('quantity');
-    input.value = parseInt(input.value) + 1;
-  };
+  if (searchInput && searchBtn && productCards.length) {
+    searchBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const searchTerm = searchInput.value.toLowerCase().trim();
 
-  document.getElementById('decrease').onclick = () => {
-    let input = document.getElementById('quantity');
-    if (parseInt(input.value) > 1) {
-      input.value = parseInt(input.value) - 1;
-    }
-  };
+      productCards.forEach((card) => {
+        const name = card.dataset.name.toLowerCase();
+        const category = card.dataset.category.toLowerCase();
 
-  // Size selection
+        const match =
+          name.includes(searchTerm) || category.includes(searchTerm);
+
+        card.style.display = match ? "block" : "none";
+      });
+    });
+  }
+
+  // === Quantity Buttons (Product Page) ===
+  const increaseBtn = document.getElementById('increase');
+  const decreaseBtn = document.getElementById('decrease');
+  const quantityInput = document.getElementById('quantity');
+
+  if (increaseBtn && decreaseBtn && quantityInput) {
+    increaseBtn.onclick = () => {
+      quantityInput.value = parseInt(quantityInput.value || '1') + 1;
+    };
+
+    decreaseBtn.onclick = () => {
+      const currentQty = parseInt(quantityInput.value || '1');
+      if (currentQty > 1) {
+        quantityInput.value = currentQty - 1;
+      }
+    };
+  }
+
+  // === Size Buttons (Product Page) ===
   const sizeButtons = document.querySelectorAll('.sizes button');
   sizeButtons.forEach(button => {
     button.onclick = () => {
@@ -123,7 +80,7 @@
     };
   });
 
-  // Tab logic
+  // === Tab Functionality (Product Details Page) ===
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabPanes = document.querySelectorAll('.tab-pane');
   tabButtons.forEach(button => {
@@ -132,27 +89,40 @@
       tabButtons.forEach(btn => btn.classList.remove('active'));
       tabPanes.forEach(pane => pane.classList.remove('active'));
       button.classList.add('active');
-      document.getElementById(tab).classList.add('active');
+      const activePane = document.getElementById(tab);
+      if (activePane) activePane.classList.add('active');
     });
   });
-document.getElementById("review-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const text = document.getElementById("review-text").value.trim();
-  if (text) {
-    const newReview = document.createElement("p");
-    newReview.textContent = `⭐️⭐️⭐️⭐️⭐️ — "${text}"`;
-    document.getElementById("review-list").appendChild(newReview);
-    document.getElementById("review-text").value = "";
+
+  // === Review Form ===
+  const reviewForm = document.getElementById("review-form");
+  const reviewText = document.getElementById("review-text");
+  const reviewList = document.getElementById("review-list");
+
+  if (reviewForm && reviewText && reviewList) {
+    reviewForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const text = reviewText.value.trim();
+      if (text) {
+        const newReview = document.createElement("p");
+        newReview.textContent = `⭐️⭐️⭐️⭐️⭐️ — "${text}"`;
+        reviewList.appendChild(newReview);
+        reviewText.value = "";
+      }
+    });
   }
-});
 
-//signin
-  function switchForm(formType) {
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.shop-form').forEach(f => f.classList.remove('active'));
-      
-      document.querySelector(`.tab-btn[onclick*="${formType}"]`).classList.add('active');
-      document.getElementById(formType).classList.add('active');
+  // === Tab Switching (Login/Signup Forms) ===
+  window.switchForm = function (formType) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.shop-form').forEach(f => f.classList.remove('active'));
+
+    const tab = document.querySelector(`.tab-btn[onclick*="${formType}"]`);
+    const form = document.getElementById(formType);
+
+    if (tab && form) {
+      tab.classList.add('active');
+      form.classList.add('active');
     }
-
-    
+  };
+});
